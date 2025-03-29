@@ -109,7 +109,7 @@ DATABASES = {
 }
 
 # Override with PostgreSQL if DATABASE_URL is available
-database_url = os.getenv('postgres://u9oe2lohkn6gr3:p954d42963ab6bda817b5c41240d29a3ceb2d6916d0d4de41514e9c63dcca81f4@cf980tnnkgv1bp.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d744bdkv0biok3')
+database_url = os.getenv('postgresql://holaholaserver_user:1GqWw2ui9WCRgABRApufuKYEkZwglI4k@dpg-cvjeg4bipnbc73flp1j0-a/holaholaserver')
 if database_url:
     DATABASES['default'] = dj_database_url.parse(
         database_url,
