@@ -485,7 +485,7 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.parse(
-        "postgresql://holaholaserver_user:1GqWw2ui9WCRgABRApufuKYEkZwglI4k@dpg-cvjeg4bipnbc73flp1j0-a/holaholaserver",
+        "postgresql://holaholaserver_user:1GqWw2ui9WCRgABRApufuKYEkZwglI4k@dpg-cvjeg4bipnbc73flp1j0-a.oregon-postgres.render.com/holaholaserver",
         conn_max_age=600,
         ssl_require=True
     )
