@@ -471,12 +471,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'holaholacars.wsgi.application'
 
-# Database
+# # Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# filepath: c:\Users\hp\OneDrive\Desktop\Projects\holaholacarserver\holaholacars\holaholacars\settings.py
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        "postgresql://holaholaserver_user:1GqWw2ui9WCRgABRApufuKYEkZwglI4k@dpg-cvjeg4bipnbc73flp1j0-a/holaholaserver",
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 # Password validation
@@ -544,6 +556,7 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://holaholacar.in.net",
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "https://holaholacarfrontend.onrender.com",
@@ -555,6 +568,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:5173",
+    "https://holaholacar.in.net",
     "https://holaholacarfrontend.onrender.com",
 ]
 CSRF_COOKIE_NAME = "csrftoken"
